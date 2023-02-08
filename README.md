@@ -1,6 +1,9 @@
 # Gutenberg Block Snippets
 This repo includes usage of packages:
-- SlotFill 
+- SlotFill
+- Gutenberge plugins
+- Hooks
+- Attributes 
 ## Installation Usage
 ```
 $ npm install

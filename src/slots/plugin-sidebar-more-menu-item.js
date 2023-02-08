@@ -12,7 +12,7 @@ const PluginSidebarMoreMenuItemTest = () => (
         <PluginSidebarMoreMenuItem target="sidebar-name" icon={ mapMarker }>
             GBA: SlotFill Plugin Sidebar More Menu Item
         </PluginSidebarMoreMenuItem>
-        <PluginSidebar name="sidebar-name" icon={ mapMarker } title="My Sidebar">
+        <PluginSidebar name="sidebar-name" icon={ mapMarker } title="Gutenberg Rocks!">
             GBA Content
         </PluginSidebar>
     </>

@@ -22,5 +22,12 @@
  */
 function create_block_tests_block_init() {
 	register_block_type( __DIR__ . '/build' );
+
+	register_post_meta( 'post', 'gba_test', array(
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string',
+    ) );
 }
 add_action( 'init', 'create_block_tests_block_init' );
+

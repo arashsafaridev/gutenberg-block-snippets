@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -15,10 +15,25 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save({attributes}) {
+	useBlockProps.save();
+	const icons = attributes.icons ? attributes.icons : false;
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Tests – hello from the saved content!' }
-		</p>
+		<>
+			<figure>
+				<img src={attributes.url} width={attributes.width}/>
+				<figcaption>{attributes.title}</figcaption>
+			</figure>
+			<RichText.Content tagName="h2" className="paragraph" value={ attributes.content } />
+			
+			{icons && icons.map((icon, index) => {
+
+					return (
+						<span key={index} id={icon.id} className={icon.classes}>Span # {index + 1}</span>
+					)
+						
+				}
+			)}
+		</>
 	);
 }

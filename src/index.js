@@ -14,6 +14,7 @@ import './slots/plugin-pre-publish-panel';
 import './slots/plugin-more-menu-item';
 import './slots/plugin-sidebar';
 import './slots/plugin-sidebar-more-menu-item';
+import './hooks/block-edit';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
